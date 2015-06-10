@@ -18,5 +18,14 @@ angular.module('Eggly', [])
             {"id": 7, "title": "Wimp", "url": "http://wimp.com", "category": "Humor"},
             {"id": 8, "title": "Dump", "url": "http://dump.com", "category": "Humor"}
         ];
+
+        $scope.currentCategory = null;
+
+        function setCurrentCategory(category) {
+            $scope.currentCategory = category;
+        }
+
+        $scope.setCurrentCategory = setCurrentCategory;
+        /*This line makes the method available for the scope, hence making it a public method instead of a private method*/
     })
 ;
