@@ -32,5 +32,34 @@ angular.module('Eggly', [])
         /*These lines make the methods available for the scope, hence making it a public method instead of a private method*/
         $scope.setCurrentCategory = setCurrentCategory;
         $scope.isCurrentCategory = isCurrentCategory;
+
+        /***************************************************************************************************************/
+        //CREATING AND EDITING STATES
+        /***************************************************************************************************************/
+        $scope.isCreating = false;
+        $scope.isEditing = false;
+
+        function startCreating() {
+            $scope.isCreating = true;
+            $scope.isEditing = false;
+        }
+
+        function cancelCreating() {
+            $scope.isCreating = false;
+        }
+
+        function startEditing() {
+            $scope.isCreating = false;
+            $scope.isEditing = true;
+        }
+
+        function cancelEditing() {
+            $scope.isEditing = false;
+        }
+
+        $scope.startCreating = startCreating;
+        $scope.cancelCreating = cancelCreating;
+        $scope.startEditing = startEditing;
+        $scope.cancelEditing = cancelEditing;
     })
 ;
