@@ -25,7 +25,12 @@ angular.module('Eggly', [])
             $scope.currentCategory = category;
         }
 
+        function isCurrentCategory(category) {
+            return $scope.currentCategory !== null && category.name === $scope.currentCategory.name;
+        }
+
+        /*These lines make the methods available for the scope, hence making it a public method instead of a private method*/
         $scope.setCurrentCategory = setCurrentCategory;
-        /*This line makes the method available for the scope, hence making it a public method instead of a private method*/
+        $scope.isCurrentCategory = isCurrentCategory;
     })
 ;
