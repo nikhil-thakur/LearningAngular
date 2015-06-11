@@ -36,13 +36,17 @@
                     <span class="glyphicon glyphicon-plus"></span>
                     Create Bookmark
                 </button>
-                <div>
+                <div ng-if="isCreating">
                     Create a bookmark!
+                    <button type="button" class="btn btn-default btn-lg pull-right" ng-click="cancelCreating()">Cancel
+                    </button>
                 </div>
             </div>
             <!----EDITING ----->
             <div ng-if="shouldShowEditing()">
                 Edit a bookmark!
+                <button type="button" class="btn btn-default btn-lg pull-right" ng-click="cancelEditing()">Cancel
+                </button>
             </div>
         </div>
     </div>
