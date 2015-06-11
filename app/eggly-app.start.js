@@ -57,9 +57,20 @@ angular.module('Eggly', [])
             $scope.isEditing = false;
         }
 
+        function shouldShowCreating() {
+            return $scope.currentCategory && !$scope.isEditing;
+            /*if current category is defined and not null as well as we are not editing. The reason why we are checking for curret category is because you have to be in a category to create a category*/
+        }
+
+        function shouldShowEditing() {
+            return $scope.isEditing && !$scope.isCreating;
+        }
+
         $scope.startCreating = startCreating;
         $scope.cancelCreating = cancelCreating;
         $scope.startEditing = startEditing;
         $scope.cancelEditing = cancelEditing;
+        $scope.shouldShowCreating = shouldShowCreating;
+        $scope.shouldShowEditing = shouldShowEditing;
     })
 ;
