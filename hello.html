@@ -18,8 +18,7 @@
             <a href="#" ng-click="setCurrentCategory(null)"><img class="logo" src="assets/img/eggly-logo.png"></a>
             <ul class="nav nav-sidebar">
                 <li ng-repeat="category in categories" ng-class="'active':isCurrentCategory(category)">
-                    <a
-                            href="#" ng-click="setCurrentCategory(category)">{{category.name}}
+                    <a href="#" ng-click="setCurrentCategory(category)">{{category.name}}
                     </a>
                 </li>
             </ul>
@@ -30,7 +29,19 @@
                 <button type="button" class="btn btn-link"><span class="glyphicon glyphicon-pencil"></span></button>
                 <a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>
             </div>
+            <div>
+                <button type="button" class="btn btn-link">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    Create Bookmark
+                </button>
+                <div>
+                    Create a bookmark!
+                </div>
+            </div>
             <hr/>
+            <div>
+                Edit a bookmark!
+            </div>
         </div>
     </div>
 </div>
