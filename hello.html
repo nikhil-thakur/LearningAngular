@@ -40,11 +40,13 @@
                       novalidate>
                     <div class="form-group">
                         <label for="newBookmarkTitle">Bookmark Title</label>
-                        <input type="text" class="form-control" id="newBookmarkTitle" ng-model="newBookmark.title">
+                        <input type="text" class="form-control" id="newBookmarkTitle" ng-model="newBookmark.title"
+                               placeholder="Enter title">
                     </div>
                     <div class="form-group">
                         <label for="newBookmarkUrl">Bookmark Url</label>
-                        <input type="text" class="form-control" id="newBookmarkUrl" ng-model="newBookmark.Url">
+                        <input type="text" class="form-control" id="newBookmarkUrl" ng-model="newBookmark.Url"
+                               placeholder="Enter Url">
                     </div>
                     <button type="submit" class="btn btn-info btn-lg">Create</button>
                     <button type="button" class="btn btn-default btn-lg pull-right" ng-click="cancelCreating()">Cancel
